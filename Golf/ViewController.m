@@ -71,6 +71,10 @@
     [self.gameTimer invalidate];
     [self.view setUserInteractionEnabled:YES];
   }
+    
+//    if (CGRectIntersectsRect(self.ball.frame,)) {
+//        NSLog(@"hit Border");
+//    }
 }
 
 
