@@ -22,6 +22,8 @@
 @property (nonatomic) CGPoint lastPoint;
 @property (nonatomic) float ballVelocityX;
 @property (nonatomic) float ballVelocityY;
+@property (nonatomic) float lastPositionX;
+@property (nonatomic) float lastPositionY;
 @property (strong, nonatomic) NSTimer *gameTimer;
 
 @end
