@@ -46,7 +46,11 @@
                     </view>
                     <connections>
                         <outlet property="ball" destination="5Xm-Xb-Fe1" id="PKh-7I-CLB"/>
+                        <outlet property="bottomWall" destination="1gd-8g-W8z" id="5Il-v2-x9w"/>
                         <outlet property="hole" destination="fZp-jC-3uZ" id="6l1-cn-NcR"/>
+                        <outlet property="leftWall" destination="RxA-Ys-znv" id="V8l-TI-2F0"/>
+                        <outlet property="rightWall" destination="ce4-Yz-Bhb" id="mtA-88-bld"/>
+                        <outlet property="topWall" destination="Iqa-bY-QaS" id="qcN-1B-1oP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize ball, hole, firstPoint, lastPoint;
+@synthesize ball, hole, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall;
 - (void)viewDidLoad {
   [super viewDidLoad];
   // changes hole image to be circular
@@ -65,6 +65,20 @@
     self.ball.center = CGPointMake(self.hole.center.x, self.hole.center.y);
     self.ball.alpha = 0.2;
   }
+    
+    if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame)) {
+      NSLog(@"top Wall");
+    }
+    if (CGRectIntersectsRect(self.ball.frame, self.bottomWall.frame)) {
+      NSLog(@"bottom Wall");
+    }
+    if (CGRectIntersectsRect(self.ball.frame, self.leftWall.frame)) {
+      NSLog(@"left Wall");
+    }
+    if (CGRectIntersectsRect(self.ball.frame, self.rightWall.frame)) {
+      NSLog(@"right Wall");
+    }
+    
    
   // if ball slows/stops turn off game timer and turn user interaction back on
   if(fabs(self.ballVelocityX) < stopSpeed && fabs(self.ballVelocityY) < stopSpeed) {

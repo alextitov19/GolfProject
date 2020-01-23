@@ -14,6 +14,10 @@
 #define stopSpeed 5.0
 @property (strong, nonatomic) IBOutlet UIImageView *hole;
 @property (strong, nonatomic) IBOutlet UIImageView *ball;
+@property (strong, nonatomic) IBOutlet UIImageView *leftWall;
+@property (strong, nonatomic) IBOutlet UIImageView *rightWall;
+@property (strong, nonatomic) IBOutlet UIImageView *topWall;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomWall;
 @property (nonatomic) CGPoint firstPoint;
 @property (nonatomic) CGPoint lastPoint;
 @property (nonatomic) float ballVelocityX;
