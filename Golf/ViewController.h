@@ -27,6 +27,8 @@
 @property (nonatomic) float ballVelocityY;
 @property (nonatomic) float lastPositionX;
 @property (nonatomic) float lastPositionY;
+@property (nonatomic) float startPositionX;
+@property (nonatomic) float startPositionY;
 @property (strong, nonatomic) NSTimer *gameTimer;
 
 @end

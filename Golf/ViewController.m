@@ -20,6 +20,8 @@
   // changes hole image to be circular
   self.hole.layer.cornerRadius = .5*self.hole.layer.frame.size.height;
   self.hole.layer.masksToBounds = YES;
+    self.startPositionX = self.ball.center.x;
+    self.startPositionY = self.ball.center.y;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -80,7 +82,7 @@
     if (CGRectIntersectsRect(self.ball.frame, self.leftRiver.frame) || CGRectIntersectsRect(self.ball.frame, self.rightRiver.frame)) {
         NSLog(@"hit River, you failed");
         self.ballVelocityY = self.ballVelocityX = 0;
-        self.ball.center = CGPointMake(177, 776);
+        self.ball.center = CGPointMake(self.startPositionX, self.startPositionY);
 
     }
     
