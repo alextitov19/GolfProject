@@ -16,12 +16,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-jC-3uZ">
-                                <rect key="frame" x="177" y="65" width="60" height="54"/>
+                                <rect key="frame" x="177" y="87" width="60" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="golfball" translatesAutoresizingMaskIntoConstraints="NO" id="5Xm-Xb-Fe1">
-                                <rect key="frame" x="177" y="581" width="60" height="60"/>
+                                <rect key="frame" x="177" y="776" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bricks" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-8g-W8z">
@@ -40,6 +40,14 @@
                                 <rect key="frame" x="383" y="44" width="142" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="river" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-yc-Y9y">
+                                <rect key="frame" x="30" y="651" width="120" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="river" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-cp-J4V">
+                                <rect key="frame" x="265" y="651" width="120" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,7 +56,9 @@
                         <outlet property="ball" destination="5Xm-Xb-Fe1" id="PKh-7I-CLB"/>
                         <outlet property="bottomWall" destination="1gd-8g-W8z" id="5Il-v2-x9w"/>
                         <outlet property="hole" destination="fZp-jC-3uZ" id="6l1-cn-NcR"/>
+                        <outlet property="leftRiver" destination="Naj-yc-Y9y" id="0UV-1R-U2f"/>
                         <outlet property="leftWall" destination="RxA-Ys-znv" id="V8l-TI-2F0"/>
+                        <outlet property="rightRiver" destination="bQL-cp-J4V" id="qX7-0G-sVH"/>
                         <outlet property="rightWall" destination="ce4-Yz-Bhb" id="mtA-88-bld"/>
                         <outlet property="topWall" destination="Iqa-bY-QaS" id="qcN-1B-1oP"/>
                     </connections>
@@ -61,6 +71,7 @@
     <resources>
         <image name="bricks" width="1372" height="236"/>
         <image name="golfball" width="114" height="114"/>
+        <image name="river" width="852" height="480"/>
         <image name="vertical wall" width="236" height="1372"/>
     </resources>
 </document>

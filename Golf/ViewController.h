@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *rightWall;
 @property (strong, nonatomic) IBOutlet UIImageView *topWall;
 @property (strong, nonatomic) IBOutlet UIImageView *bottomWall;
+@property (strong, nonatomic) IBOutlet UIImageView *leftRiver;
+@property (strong, nonatomic) IBOutlet UIImageView *rightRiver;
+
 @property (nonatomic) CGPoint firstPoint;
 @property (nonatomic) CGPoint lastPoint;
 @property (nonatomic) float ballVelocityX;

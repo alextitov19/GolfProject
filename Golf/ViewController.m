@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize ball, hole, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY;
+@synthesize ball, hole, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY, leftRiver, rightRiver;
 - (void)viewDidLoad {
   [super viewDidLoad];
   // changes hole image to be circular
@@ -76,6 +76,13 @@
     self.ball.center = CGPointMake(self.hole.center.x, self.hole.center.y);
     self.ball.alpha = 0.2;
   }
+    
+    if (CGRectIntersectsRect(self.ball.frame, self.leftRiver.frame) || CGRectIntersectsRect(self.ball.frame, self.rightRiver.frame)) {
+        NSLog(@"hit River, you failed");
+        self.ballVelocityY = self.ballVelocityX = 0;
+        self.ball.center = CGPointMake(177, 776);
+
+    }
     
     if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame)) {
         NSLog(@"top Wall");
