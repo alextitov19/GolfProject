@@ -78,18 +78,21 @@
   }
     
     if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame)) {
-      NSLog(@"top Wall");
+        NSLog(@"top Wall");
+        self.ballVelocityY = self.ballVelocityY * (-1);
     }
     if (CGRectIntersectsRect(self.ball.frame, self.bottomWall.frame)) {
-      NSLog(@"bottom Wall");
+        NSLog(@"bottom Wall");
+        self.ballVelocityY = self.ballVelocityY * (-1);
     }
     if (CGRectIntersectsRect(self.ball.frame, self.leftWall.frame)) {
-      NSLog(@"left Wall");
-        self.ball.center = CGPointMake(lastPositionX, self.ball.center.y + (self.ball.center.y - lastPositionY) );
+        NSLog(@"left Wall");
+        self.ballVelocityX = self.ballVelocityX * (-1);
         
     }
     if (CGRectIntersectsRect(self.ball.frame, self.rightWall.frame)) {
-      NSLog(@"right Wall");
+        NSLog(@"right Wall");
+        self.ballVelocityX = self.ballVelocityX * (-1);
     }
     
    
