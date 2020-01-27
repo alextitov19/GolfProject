@@ -51,8 +51,8 @@
     self.ball.alpha = 0.2;
   }
     
-    if (CGRectIntersectsRect(self.ball.frame, self.leftRiver.frame) || CGRectIntersectsRect(self.ball.frame, self.rightRiver.frame)) {
-        NSLog(@"hit River, you failed");
+    if (CGRectIntersectsRect(self.ball.frame, self.leftRiver.frame) || CGRectIntersectsRect(self.ball.frame, self.rightRiver.frame) || CGRectIntersectsRect(self.ball.frame, self.lavaPit.frame)) {
+        NSLog(@"Hit river or lava");
         self.ballVelocityY = self.ballVelocityX = 0;
         self.ball.center = CGPointMake(self.startPositionX, self.startPositionY);
 
@@ -60,28 +60,22 @@
     
     if (CGRectIntersectsRect(self.ball.frame, self.sandPitRight.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitLeft.frame)) {
         self.speedDamping = 0.5;
+    } else if (CGRectIntersectsRect(self.ball.frame, self.boosterRight.frame) || CGRectIntersectsRect(self.ball.frame, self.boosterLeft.frame)) {
+        self.speedDamping = 1.5;
     } else {
         self.speedDamping = 0.9;
     }
     
-    if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame)) {
-        NSLog(@"top Wall");
+    if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame) || CGRectIntersectsRect(self.ball.frame, self.bottomWall.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitWallTop.frame)) {
         self.ballVelocityY = self.ballVelocityY * (-1);
+        NSLog(@"Hit horizontal wall");
     }
-    if (CGRectIntersectsRect(self.ball.frame, self.bottomWall.frame)) {
-        NSLog(@"bottom Wall");
-        self.ballVelocityY = self.ballVelocityY * (-1);
-    }
-    if (CGRectIntersectsRect(self.ball.frame, self.leftWall.frame)) {
-        NSLog(@"left Wall");
+
+    if (CGRectIntersectsRect(self.ball.frame, self.leftWall.frame) || CGRectIntersectsRect(self.ball.frame, self.rightWall.frame) || CGRectIntersectsRect(self.ball.frame, self.lavaWallRight.frame) || CGRectIntersectsRect(self.ball.frame, self.lavaWallLeft.frame)) {
         self.ballVelocityX = self.ballVelocityX * (-1);
-        
+        NSLog(@"Hit vertical wall");
     }
-    if (CGRectIntersectsRect(self.ball.frame, self.rightWall.frame)) {
-        NSLog(@"right Wall");
-        self.ballVelocityX = self.ballVelocityX * (-1);
-    }
-    
+
    
   // if ball slows/stops turn off game timer and turn user interaction back on
   if(fabs(self.ballVelocityX) < stopSpeed && fabs(self.ballVelocityY) < stopSpeed) {
