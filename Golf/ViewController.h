@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController
 #define speedScale 0.20
-#define speedDamping 0.90
 #define stopSpeed 5.0
 @property (strong, nonatomic) IBOutlet UIImageView *hole;
 @property (strong, nonatomic) IBOutlet UIImageView *ball;
@@ -37,6 +36,7 @@
 @property (nonatomic) float lastPositionY;
 @property (nonatomic) float startPositionX;
 @property (nonatomic) float startPositionY;
+@property (nonatomic) double speedDamping;
 @property (strong, nonatomic) NSTimer *gameTimer;
 
 @end

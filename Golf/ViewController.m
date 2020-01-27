@@ -22,6 +22,7 @@
   self.hole.layer.masksToBounds = YES;
     self.startPositionX = self.ball.center.x;
     self.startPositionY = self.ball.center.y;
+    self.speedDamping = 0.9;
 }
 
 
@@ -34,8 +35,8 @@
 
 -(void)moveBall {
   // simulates friction by reducing velocity
-  self.ballVelocityX = speedDamping * self.ballVelocityX;
-  self.ballVelocityY = speedDamping * self.ballVelocityY;
+  self.ballVelocityX = self.speedDamping * self.ballVelocityX;
+  self.ballVelocityY = self.speedDamping * self.ballVelocityY;
    
 
     
@@ -55,6 +56,12 @@
         self.ballVelocityY = self.ballVelocityX = 0;
         self.ball.center = CGPointMake(self.startPositionX, self.startPositionY);
 
+    }
+    
+    if (CGRectIntersectsRect(self.ball.frame, self.sandPitRight.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitLeft.frame)) {
+        self.speedDamping = 0.5;
+    } else {
+        self.speedDamping = 0.9;
     }
     
     if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame)) {
