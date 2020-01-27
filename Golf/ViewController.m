@@ -61,7 +61,7 @@
     if (CGRectIntersectsRect(self.ball.frame, self.sandPitRight.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitLeft.frame)) {
         self.speedDamping = 0.5;
     } else if (CGRectIntersectsRect(self.ball.frame, self.boosterRight.frame) || CGRectIntersectsRect(self.ball.frame, self.boosterLeft.frame)) {
-        self.speedDamping = 1.5;
+        self.speedDamping = 1.1;
     } else {
         self.speedDamping = 0.9;
     }

@@ -32,11 +32,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="river" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-yc-Y9y">
-                                <rect key="frame" x="29" y="640" width="140" height="79"/>
+                                <rect key="frame" x="29" y="650" width="140" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="river" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-cp-J4V">
-                                <rect key="frame" x="245" y="640" width="140" height="79"/>
+                                <rect key="frame" x="245" y="650" width="140" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sand horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="Lcd-gU-X2C">
@@ -110,7 +110,7 @@
     </scenes>
     <resources>
         <image name="bricks" width="1372" height="236"/>
-        <image name="golfball" width="114" height="114"/>
+        <image name="golfball" width="225" height="225"/>
         <image name="lava" width="612" height="405"/>
         <image name="river" width="852" height="480"/>
         <image name="sand horizontal" width="1333" height="1000"/>
