@@ -20,6 +20,14 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bottomWall;
 @property (strong, nonatomic) IBOutlet UIImageView *leftRiver;
 @property (strong, nonatomic) IBOutlet UIImageView *rightRiver;
+@property (strong, nonatomic) IBOutlet UIImageView *lavaWallLeft;
+@property (strong, nonatomic) IBOutlet UIImageView *lavaWallRight;
+@property (strong, nonatomic) IBOutlet UIImageView *lavaPit;
+@property (strong, nonatomic) IBOutlet UIImageView *sandPitLeft;
+@property (strong, nonatomic) IBOutlet UIImageView *sandPitRight;
+@property (strong, nonatomic) IBOutlet UIImageView *sandPitWallTop;
+@property (strong, nonatomic) IBOutlet UIImageView *boosterLeft;
+@property (strong, nonatomic) IBOutlet UIImageView *boosterRight;
 
 @property (nonatomic) CGPoint firstPoint;
 @property (nonatomic) CGPoint lastPoint;
