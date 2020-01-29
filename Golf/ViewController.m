@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize ball, hole, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY, leftRiver, rightRiver, lavaWallLeft, lavaWallRight, sandPitWallTop, boosterLeft, boosterRight, lavaPit, sandPitLeft, sandPitRight;
+@synthesize ball, hole, hippo, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY, leftRiver, rightRiver, lavaWallLeft, lavaWallRight, sandPitWallTop, boosterLeft, boosterRight, lavaPit, sandPitLeft, sandPitRight, hippoSpeedX;
 - (void)viewDidLoad {
   [super viewDidLoad];
   // changes hole image to be circular
@@ -23,6 +23,12 @@
     self.startPositionX = self.ball.center.x;
     self.startPositionY = self.ball.center.y;
     self.speedDamping = 0.9;
+    self.hippoSpeedX = 0.1;
+    [NSTimer scheduledTimerWithTimeInterval:0.0001
+    target:self
+    selector:@selector(moveHippo:)
+    userInfo:nil
+    repeats:YES];
 }
 
 
@@ -84,6 +90,15 @@
   }
     
 
+}
+
+-(void)moveHippo: (NSTimer *) timer {
+    NSLog(@"Hippo moved");
+    self.hippo.center = CGPointMake(self.hippo.center.x + self.hippoSpeedX, self.hippo.center.y);
+    if (CGRectIntersectsRect(self.hippo.frame, self.leftWall.frame) || CGRectIntersectsRect(self.hippo.frame, self.rightWall.frame)) {
+        NSLog(@"Hit river or lava");
+        self.hippoSpeedX *= -1;
+    }
 }
 
 

@@ -80,6 +80,10 @@
                                 <rect key="frame" x="193" y="796" width="34" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hippo original" translatesAutoresizingMaskIntoConstraints="NO" id="cnK-O9-rKX">
+                                <rect key="frame" x="164" y="401" width="81" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -89,6 +93,7 @@
                         <outlet property="boosterLeft" destination="Ipu-pt-b6W" id="Sk2-G0-zt8"/>
                         <outlet property="boosterRight" destination="t0S-sf-QAC" id="pL3-dI-tEk"/>
                         <outlet property="bottomWall" destination="1gd-8g-W8z" id="5Il-v2-x9w"/>
+                        <outlet property="hippo" destination="cnK-O9-rKX" id="b38-0b-NMX"/>
                         <outlet property="hole" destination="fZp-jC-3uZ" id="6l1-cn-NcR"/>
                         <outlet property="lavaPit" destination="VCg-5C-bke" id="HVE-bx-3y3"/>
                         <outlet property="lavaWallLeft" destination="ikQ-gf-GHu" id="C4V-dn-BMF"/>
@@ -111,6 +116,7 @@
     <resources>
         <image name="bricks" width="1372" height="236"/>
         <image name="golfball cropped" width="70" height="70"/>
+        <image name="hippo original" width="237" height="212"/>
         <image name="lava" width="612" height="405"/>
         <image name="river" width="852" height="480"/>
         <image name="sand horizontal" width="1333" height="1000"/>

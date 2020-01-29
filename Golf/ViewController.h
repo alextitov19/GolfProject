@@ -27,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *sandPitWallTop;
 @property (strong, nonatomic) IBOutlet UIImageView *boosterLeft;
 @property (strong, nonatomic) IBOutlet UIImageView *boosterRight;
+@property (strong, nonatomic) IBOutlet UIImageView *hippo;
 
 @property (nonatomic) CGPoint firstPoint;
 @property (nonatomic) CGPoint lastPoint;
@@ -38,6 +39,7 @@
 @property (nonatomic) float startPositionY;
 @property (nonatomic) double speedDamping;
 @property (strong, nonatomic) NSTimer *gameTimer;
+@property (nonatomic) double hippoSpeedX;
 
 @end
 
