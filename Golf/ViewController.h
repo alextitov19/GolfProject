@@ -40,6 +40,8 @@
 @property (nonatomic) double speedDamping;
 @property (strong, nonatomic) NSTimer *gameTimer;
 @property (nonatomic) double hippoSpeedX;
+@property (nonatomic) Boolean isMoving;
+
 
 @end
 

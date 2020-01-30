@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
-@synthesize ball, hole, hippo, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY, leftRiver, rightRiver, lavaWallLeft, lavaWallRight, sandPitWallTop, boosterLeft, boosterRight, lavaPit, sandPitLeft, sandPitRight, hippoSpeedX;
+@synthesize ball, hole, hippo, firstPoint, lastPoint, leftWall, rightWall, topWall, bottomWall, lastPositionX, lastPositionY, leftRiver, rightRiver, lavaWallLeft, lavaWallRight, sandPitWallTop, boosterLeft, boosterRight, lavaPit, sandPitLeft, sandPitRight, hippoSpeedX, isMoving;
 - (void)viewDidLoad {
   [super viewDidLoad];
   // changes hole image to be circular
@@ -40,6 +40,7 @@
 
 
 -(void)moveBall {
+    
   // simulates friction by reducing velocity
   self.ballVelocityX = self.speedDamping * self.ballVelocityX;
   self.ballVelocityY = self.speedDamping * self.ballVelocityY;
@@ -104,6 +105,7 @@
   if(fabs(self.ballVelocityX) < stopSpeed && fabs(self.ballVelocityY) < stopSpeed) {
     [self.gameTimer invalidate];
     [self.view setUserInteractionEnabled:YES];
+      self.isMoving = NO;
   }
     
 
@@ -116,6 +118,10 @@
         NSLog(@"Hit river or lava");
         self.hippoSpeedX *= -1;
     }
+    if (self.isMoving == NO) {
+        NSLog(@"not moving");
+
+    }
     
 }
 
@@ -123,7 +129,7 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
   NSLog(@"touches Ended");
-   
+    self.isMoving = YES;
   UITouch *touch = [touches anyObject];
    
   // store point a touch end
