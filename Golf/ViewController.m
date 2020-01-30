@@ -64,6 +64,14 @@
 
     }
     
+    if (CGRectIntersectsRect(self.ball.frame, self.hippo.frame)) {
+        if (388<self.ball.center.y && self.ball.center.y<448) {
+            self.ballVelocityX *= -1;
+        } else {
+            self.ballVelocityY *= -1;
+        }
+    }
+    
     if (CGRectIntersectsRect(self.ball.frame, self.sandPitRight.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitLeft.frame)) {
         self.speedDamping = 0.5;
     } else if (CGRectIntersectsRect(self.ball.frame, self.boosterRight.frame) || CGRectIntersectsRect(self.ball.frame, self.boosterLeft.frame)) {
@@ -73,12 +81,21 @@
     }
     
     if (CGRectIntersectsRect(self.ball.frame, self.topWall.frame) || CGRectIntersectsRect(self.ball.frame, self.bottomWall.frame) || CGRectIntersectsRect(self.ball.frame, self.sandPitWallTop.frame)) {
-        self.ballVelocityY = self.ballVelocityY * (-1);
+        if (483 < self.ball.center.y && self.ball.center.y < 517) {
+            self.ballVelocityX *= -1;
+        } else {
+            self.ballVelocityY *= -1;
+        }
         NSLog(@"Hit horizontal wall");
     }
 
     if (CGRectIntersectsRect(self.ball.frame, self.leftWall.frame) || CGRectIntersectsRect(self.ball.frame, self.rightWall.frame) || CGRectIntersectsRect(self.ball.frame, self.lavaWallRight.frame) || CGRectIntersectsRect(self.ball.frame, self.lavaWallLeft.frame)) {
-        self.ballVelocityX = self.ballVelocityX * (-1);
+        if ((116 < self.ball.center.x && self.ball.center.x < 150) ||(259 < self.ball.center.x && self.ball.center.x < 293)) {
+            self.ballVelocityY *= -1;
+        } else {
+            self.ballVelocityX *= -1;
+        }
+        
         NSLog(@"Hit vertical wall");
     }
 
@@ -99,6 +116,7 @@
         NSLog(@"Hit river or lava");
         self.hippoSpeedX *= -1;
     }
+    
 }
 
 
